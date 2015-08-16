@@ -1,0 +1,49 @@
+package solutions.egen.model;
+
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+public class Guest {
+
+	private int ID;
+	private String NAME;
+	private String DateTime;
+	private String Contact;
+	private int Size;
+	
+	public int getID() {
+		return ID;
+	}
+	public void setID(int iD) {
+		ID = iD;
+	}
+	public String getNAME() {
+		return NAME;
+	}
+	public void setNAME(String nAME) {
+		NAME = nAME;
+	}
+	public String getDateTime() {
+		 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		    Date date = new Date();
+		    return dateFormat.format(date);
+	}
+	public void setDateTime(String dateTime) {
+		DateTime = dateTime;
+	}
+	public String getContact() {
+		return Contact;
+	}
+	public void setContact(String contact) {
+		Contact = contact;
+	}
+	public int getSize() {
+		return Size;
+	}
+	public void setSize(int size) {
+		Size = size;
+	}
+	
+	
+}

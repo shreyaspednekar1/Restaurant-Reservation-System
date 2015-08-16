@@ -1,0 +1,8 @@
+package solutions.egen.rest;
+
+import javax.ws.rs.Path;
+
+@Path("/guest")
+public class GuestController {
+
+}

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" ng-app="tabApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>
+        Login
+    </title>
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand navbar-brand1"><span class="fa fa-cutlery" style="margin-right:10px"></span>Mumbai Grill</a>
+    </div>
+    <div class="logout1">
+        <a class="random" href="index.html">Logout</a>
+    </div>
+</div>
+
+<div class="container" ng-controller="TabController as mainVm">
+
+
+
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active">
+                <a data-toggle="tab" href="#sectionA">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="tab-text">Profile</span>
+                </a>
+        </li>
+
+        <li>
+            <a data-toggle="tab" href="#sectionB">
+                <span class="glyphicon glyphicon-th"></span>
+                <span class="tab-text">Seating</span>
+            </a>
+        </li>
+
+        <li>
+            <a data-toggle="tab" href="#sectionC">
+                <span class="glyphicon glyphicon-calendar"></span>
+                <span class="tab-text">Reservations</span>
+            </a>
+        </li>
+
+        <li>
+            <a data-toggle="tab" href="#sectionD">
+                <span class="glyphicon glyphicon-asterisk"></span>
+                <span class="tab-text">Settings</span>
+            </a>
+        </li>
+    </ul>
+
+ <div class="tab-content">
+    <div id="sectionA" class="tab-pane fade in active">
+        <h1>Login</h1>
+        <div class="form-horizontal" role="form">
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="sectionB" class="tab-pane fade">
+        <h3>Seating Area</h3>
+        <div class="row">
+            <div class="col-md-4">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Table #</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                    <th>Start time</th>
+                    <th>Confirmation #</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Reserved</td>
+                    <td>12.00pm</td>
+                    <td><button>SS1234</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>Reserved</td>
+                    <td>2.00pm</td>
+                    <td><button>SS1674</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>Available</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>Reserved</td>
+                    <td>8.00pm</td>
+                    <td><button>SS1984</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>Available</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>Reserved</td>
+                    <td>6.00pm</td>
+                    <td><button>SS1243</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>Reserved</td>
+                    <td>12.00pm</td>
+                    <td><button>SS1255</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>Reserved</td>
+                    <td>8.30pm</td>
+                    <td><button>SS1255</button></td>
+                </tr>
+                </tbody>
+            </table>
+           </div>
+
+           <div class="col-md-8">
+              <div class="figure">
+               <div class="circle-table" id="one">
+                   <p>Table 1</p>
+                   <p>Reserved</p>
+                   <p><a href="#">SS1234</a></p>
+               </div>
+               <div class="rectangle-table" id="two">
+                   <p>Table 2</p>
+                   <p>Reserved</p>
+                   <p><a href="#">SS1674</a></p>
+               </div>
+               <div class="circle-table" id="three">
+                   <p>Table 3</p>
+                   <p>Available</p>
+                   <p><a href="#">-</a></p>
+               </div>
+                  <div class="circle-table" id="four">
+                      <p>Table 4</p>
+                      <p>Reser4ed</p>
+                      <p><a href="#">SS1234</a></p>
+                  </div>
+                  <div class="rectangle-table" id="five">
+                      <p>Table 5</p>
+                      <p>Reserved</p>
+                      <p><a href="#">SS1674</a></p>
+                  </div>
+                  <div class="circle-table" id="six">
+                      <p>Table 6</p>
+                      <p>Reserved</p>
+                      <p><a href="#">SS1234</a></p>
+                  </div>
+                  <div class="rectangle-table" id="seven">
+                      <p>Table 7</p>
+                      <p>Reserved</p>
+                      <p><a href="#">SS1674</a></p>
+                  </div>
+                  <div class="circle-table" id="eight">
+                      <p>Table 8</p>
+                      <p>Available</p>
+                      <p><a href="#">-</a></p>
+                  </div>
+              </div>
+           </div>
+
+        </div>
+    </div>
+
+    <div id="sectionC" class="tab-pane fade">
+        <h3>Reservation List</h3>
+      <div class="row">
+        <div class="col-md-4">
+            <form class="form-horizontal" ng-submit="mainVm.addguest()">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" ng-model="mainVm.newPerson.name">
+            </div>
+
+            <div class="form-group">
+                <label>Time:</label>
+                <input type="time" class="form-control" id="time" placeholder="Enter time" ng-model="mainVm.newPerson.Time">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="number" class="form-control" id="contact" placeholder="317-603-7168" ng-model="mainVm.newPerson.Contact">
+            </div>
+
+            <div class="form-group">
+                <label>Size:</label>
+                <input type="number" class="form-control" id="size" placeholder="Enter number of people" ng-model="mainVm.newPerson.Size">
+            </div>
+
+            <button type="submit" class="btn btn-default">Add Guest</button>
+           </form>
+        </div>
+
+       <div class="col-md-8">
+
+        <div class="search">
+            <input type="search" class="form-control" placeholder="Search here" ng-model="mainVm.searchtext">
+        </div>
+
+        <div class="data">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Date/Time</th>
+                    <th>Contact</th>
+                    <th>Size</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in mainVm.people | filter: mainVm.searchtext">
+                    <td>{{p.id}}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.Time}}</td>
+                    <td>{{p.Contact}}</td>
+                    <td>{{p.Size}}</td>
+                    <td><span class="{{p.edit}}" ng-click="mainVm.edit()"></span></td>
+                    <td><span class="{{p.delete}}" ng-click="mainVm.delete($index)"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+       </div>
+      </div>
+    </div>
+
+    <div id="sectionD" class="tab-pane fade">
+        <h2>Mumbai Grill Contact Information</h2>
+        <p> Contact #: 317-603-7168 </p>
+        <p> Email: mumbaigrill@gmail.com </p>
+        <p> Address: 916 East Main Street, I-65, Exit-99, Greenwood, Indiana.</p>
+        <p> Open: Tuesday to Thursday 11.00am to 9.00pm </p>
+        <p> Friday to Saturday  11.00am to 10.00pm </p>
+        <p> Closed on Monday </p>
+        <button type="edit" class="btn large-btn btn-primary" id="edit_b">Edit Contact Information </button>
+    </div>
+ </div>
+
+</div>
+
+
+<div class="container-fluid container-fluid1">
+
+    <a class="navbar-brand navbar-brand2">@copyright. Mumbai Grill, 322 Canal Walk, Indianapolis, Indiana, 46202, (317)-603-7168.</a>
+
+</div>
+
+
+
+</body>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="script.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main-ctrl.js"></script>
+
+
+
+</html>

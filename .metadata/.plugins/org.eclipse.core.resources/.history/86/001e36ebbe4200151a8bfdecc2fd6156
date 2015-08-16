@@ -1,0 +1,14 @@
+package solutions.egen.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import solutions.egen.model.Guest;
+
+public class GuestDAO {
+
+	
+	public List<Guest> getAll() {
+		List<Guest> guestlist = new ArrayList<Guest>();
+	}
+}

@@ -1,0 +1,19 @@
+package solutions.egen.rest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+@Path("/guest")
+public class GuestController {
+
+	@GET
+	@Path("/all")
+	public String getAll(){
+		return "something";
+	}
+	
+	@Path("/add")
+	public String addGuest(){
+		return "added";
+	}
+}

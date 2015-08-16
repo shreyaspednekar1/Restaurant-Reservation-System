@@ -1,0 +1,18 @@
+package solutions.egen.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import solutions.egen.model.Guest;
+import solutions.egen.utils.DBUtil;
+
+public class GuestDAO {
+
+	
+	public List<Guest> getAll() {
+		List<Guest> guestlist = new ArrayList<Guest>();
+		Connection con = DBUtil.connectToDB();
+		return guestlist;
+	}
+}

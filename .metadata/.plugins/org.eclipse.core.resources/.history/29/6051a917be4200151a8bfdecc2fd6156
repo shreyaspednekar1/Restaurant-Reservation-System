@@ -1,0 +1,5 @@
+package solutions.egen.model;
+
+public class Guest {
+
+}

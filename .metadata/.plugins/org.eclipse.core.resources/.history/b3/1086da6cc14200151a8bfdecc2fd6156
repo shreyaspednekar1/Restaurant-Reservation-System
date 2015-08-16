@@ -1,0 +1,32 @@
+package solutions.egen.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import solutions.egen.model.Guest;
+import solutions.egen.utils.DBUtil;
+
+public class GuestDAO {
+
+	
+	public List<Guest> getAll() {
+		List<Guest> guestlist = new ArrayList<Guest>();
+		Connection con = DBUtil.connectToDB();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			ps = con.prepareStatement("Select * from guest");
+			rs = ps.executeQuery();
+			while(rs.next()){
+				Guest  gue = new Guest();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return guestlist;
+	}
+}

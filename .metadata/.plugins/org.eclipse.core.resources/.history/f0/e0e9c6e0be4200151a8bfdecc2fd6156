@@ -1,0 +1,9 @@
+package solutions.egen.dao;
+
+public class GuestDAO {
+
+	
+	public void getAll() {
+		
+	}
+}

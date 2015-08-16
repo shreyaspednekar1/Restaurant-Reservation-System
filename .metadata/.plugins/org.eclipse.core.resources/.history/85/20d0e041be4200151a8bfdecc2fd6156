@@ -1,0 +1,12 @@
+package solutions.egen.model;
+
+import java.util.Date;
+
+public class Guest {
+
+	private int ID;
+	private String NAME;
+	private Date DateTime;
+	private String Contact;
+	private int Size;
+}

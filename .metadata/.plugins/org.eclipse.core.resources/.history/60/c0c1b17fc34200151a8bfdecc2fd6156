@@ -1,0 +1,29 @@
+package solutions.egen.rest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+import solutions.egen.dao.GuestDAO;
+import solutions.egen.model.Guest;
+
+@Path("/guest")
+public class GuestController {
+
+	@GET
+	@Path("/all")
+	public List<Guest> getAll(){
+		
+		GuestDAO dao = new GuestDAO();
+		List<Guest> guestlist = dao.getAll();
+		return guestlist;
+	}
+	
+	@GET
+	@Path("/add")
+	public String addGuest(){
+		return "added";
+	}
+}
